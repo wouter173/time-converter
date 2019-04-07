@@ -29,13 +29,13 @@ def parse (time):
   if (hour > 12 or hour < 1) or (minutes > 59 or minutes < 0) or (ampm != 'am' and ampm != 'pm'):
     return error
 
+  if hour == 12:
+    hour = 0
+
   if ampm == "pm":
     hour += 12
-    if hour > 23:
-      hour - 24
-  
-  if hour == 24:
-    hour = 0
+    # if hour > 23:
+    #   hour - 24
   
   hour = str(hour)
   minutes = str(minutes)
