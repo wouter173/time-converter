@@ -12,7 +12,7 @@ def main():
   print("example: " + deco.green("09:45am"))
 
 if __name__ == "__main__":
-  main("time converter")
+  main()
   loop = True
 
 while loop == True:
