@@ -17,11 +17,8 @@ debugTimes = (
   "11:59pm",
 )
 
-if os.uname()[0] == "Darwin":
-  clear = "clear"
-elif os.uname()[0] == "Linux":
-  clear = "clear"
-else:
+clear = "clear"
+if os.name == "nt":
   clear = "cls"
   
 def main(commands = True):
@@ -54,7 +51,7 @@ while loop == True:
       if len(x) == 6:
         space = " "
       print(x + space + " -> " + deco.green(time.parse(x)))
-    input("> ")
+    input("Press a key to continue ...")
     main()
 
 
