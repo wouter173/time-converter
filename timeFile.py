@@ -49,5 +49,8 @@ def parse (time):
   if(len(minutes) == 1):
     minutes = "0" + minutes
 
+  if(len(hour) == 1):
+    hour = "0" + hour
+
   return str(hour) + ":" + str(minutes)
 
